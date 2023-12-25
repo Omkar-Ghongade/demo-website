@@ -1,0 +1,116 @@
+/* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Arial+Sans:wght@400;700&display=swap');
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Adjust padding for top/bottom and left/right */
+  color: #fff;
+  font-family: 'Arial'; /* Use Arial if available, otherwise use sans-serif */
+  position: relative;
+}
+
+  .App-logo{
+    width: 120px;
+  }
+  
+  .logo-container {
+    width: 50px; /* Adjust the width as needed */
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px; /* Increase margin for more space between links */
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menu-icon{
+    display: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-elements nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .nav-elements nav:not(:last-child) {
+    margin-right: 60px;
+  }
+  
+  .nav-elements nav a {
+    text-decoration: none;
+  }
+  
+  .nav-elements nav a.active {
+    color: #574c4c;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-elements nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #574c4c;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-elements nav:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .nav-elements {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      background-color: #000000;
+      width: 0px;
+      height: calc(100vh - 60px);
+      transition: all 0.3s ease-in;
+      overflow: hidden;
+    }
+  
+    .nav-elements.active {
+      width : 100%;
+    }
+  
+    .nav-elements nav {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+    font-weight: bold;
+    }
+  
+    .nav-elements nav {
+      margin-right: unset;
+      margin-top: 22px;
+    }
+
+    .menu-icon{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
