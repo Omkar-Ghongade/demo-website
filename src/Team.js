@@ -1,10 +1,11 @@
 import React from 'react'
+import Card from './Card'
 
 const Team = () => {
   return (
     <div>
         <h1>
-            Team
+            <Card/>
         </h1>
     </div>
   )
