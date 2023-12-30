@@ -1,17 +1,14 @@
- .footer-container {
+.footer-container {
   color: #fff;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: 0;
-  width: 100%;
 }
 
 .footer-part-1,
 .footer-part-2,
 .footer-part-3 {
-  flex: 1;
   text-align: center;
 }
 
@@ -26,9 +23,8 @@
   margin-right: 10px;
   font-size: 20px;
   text-decoration: none;
+  padding: 5px;
 }
-
-/* Media Queries for Responsive Design */
 
 @media only screen and (max-width: 768px) {
   .footer-container {
@@ -40,5 +36,9 @@
   .footer-part-2,
   .footer-part-3 {
     margin-bottom: 20px;
+  }
+
+  .social-links a {
+    font-size: 16px;
   }
 }
